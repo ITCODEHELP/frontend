@@ -1,20 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import { NextPage } from 'next';
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
+import { NextPage } from "next";
+import type { AppProps } from "next/app";
+import Head from "next/head";
 
-import { DownloaderWrapper } from '@/contexts/downloaderContext';
-import { ErrorWrapper } from '@/contexts/errorContext';
-import { ModalWrapper } from '@/contexts/modalContext';
-import { PostWrapper } from '@/contexts/postContext';
-import { EmotionCacheProvider } from '@/contexts/reactSelectContext';
-import { ScreenWrapper } from '@/contexts/screenContext';
-import { UserWrapper } from '@/contexts/userContext';
+import { DownloaderWrapper } from "@/contexts/downloaderContext";
+import { ErrorWrapper } from "@/contexts/errorContext";
+import { ModalWrapper } from "@/contexts/modalContext";
+import { PostWrapper } from "@/contexts/postContext";
+import { EmotionCacheProvider } from "@/contexts/reactSelectContext";
+import { ScreenWrapper } from "@/contexts/screenContext";
+import { UserWrapper } from "@/contexts/userContext";
 
-import { ToastWrapper } from '@/contexts/toastContext';
-import '@/styles/globals.css';
-import '@/styles/reset.css';
+import { ToastWrapper } from "@/contexts/toastContext";
+import "@/styles/globals.css";
+import "@/styles/reset.css";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -30,6 +30,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   return (
     <>
       <Head>
+        {console.log("check")}
         <title>flockfysh | lightning fast large scale ML datasets</title>
 
         <meta
